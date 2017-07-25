@@ -180,7 +180,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " let Vundle manage Vundle
 " required!
-Plugin 'VundleVim/vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
+
+" Color scheme
+Plugin 'ovu/badwolf'
 
 " My Bundles here:
 Plugin 'jelera/vim-javascript-syntax'
@@ -192,7 +195,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'mattn/emmet-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'Valloric/YouCompleteMe'
+" Plugin 'Valloric/YouCompleteMe'
 " Required for go
 Plugin 'fatih/vim-go'
 Plugin 'SirVer/ultisnips'
@@ -218,7 +221,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'svermeulen/vim-easyclip'
 
 " Needed for Omnisharp
-Plugin 'tpope/vim-dispatch'
+" Plugin 'tpope/vim-dispatch'
 
 " Scala
 Plugin 'derekwyatt/vim-scala'
@@ -227,7 +230,8 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'eagletmt/ghcmod-vim'
 Plugin 'bitc/vim-hdevtools'
 Plugin 'eagletmt/neco-ghc'
-"Plugin 'Shougo/neocomplete'
+Plugin 'Shougo/neocomplete'
+Plugin 'Shougo/vimproc.vim'
 call vundle#end()
 
 filetype plugin indent on     " required!
@@ -363,7 +367,7 @@ noremap T :HdevtoolsType <cr>
 au FileType haskell nnoremap <buffer> <F1> :GhcModType<CR>
 au FileType haskell nnoremap <buffer> <silent> <F2> :GhcModTypeClear<CR>
 
-" Configure YouCompleteMe with geco
+" Configure YouCompleteMe with neco
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
 
 " Avoid error of module not found with hdevtools
