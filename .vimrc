@@ -366,6 +366,11 @@ let g:syntastic_check_on_wq = 1
 noremap T :HdevtoolsType <cr>
 au FileType haskell nnoremap <buffer> <F1> :GhcModType<CR>
 au FileType haskell nnoremap <buffer> <silent> <F2> :GhcModTypeClear<CR>
+au FileType haskell nnoremap <buffer> <silent> ti :GhcModInfo!<CR>
+au FileType haskell nnoremap <buffer> <silent> ts :GhcModSplitFunCase!<CR>
+au FileType haskell nnoremap <buffer> <silent> tc :GhcModSigCodegen!<CR>
+au FileType haskell nnoremap <buffer> <silent> te :GhcModTypeInsert!<CR>
+au FileType haskell nnoremap <buffer> <silent> tf :GhcModInfoPreview!<CR>
 
 " Configure YouCompleteMe with neco
 let g:ycm_semantic_triggers = {'haskell' : ['.']}
@@ -379,8 +384,8 @@ function! FindCabalSandboxRootPackageConf()
   return glob(FindCabalSandboxRoot().'/*-packages.conf.d')
 endfunction
 
-" let g:syntastic_options_hdevtools_args = '-g-ilib -g-isrc -g-i. -g-idist/build/autogen -g-Wall -g-package-conf='.FindCabalSandboxRootPackageConf()
-let g:hdevtools_options = '-g-ilib -g-isrc -g-i. -g-idist/build/autogen -g-Wall -g-package-conf='.FindCabalSandboxRootPackageConf()
+let g:syntastic_haskell_hdevtools_args = '-g-ilib -g-isrc -g-i. -g-idist/build/autogen -g-Wall -g-package-conf='.FindCabalSandboxRootPackageConf()
+" let g:hdevtools_options = '-g-ilib -g-isrc -g-i. -g-idist/build/autogen -g-Wall -g-package-conf='.FindCabalSandboxRootPackageConf()
 
 " }}}
 
