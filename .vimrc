@@ -9,6 +9,12 @@ let mapleader = ","
 " Global variables {{{
 let s:isWindows = has('win32') || has('win64')
 "}}}
+" Commands timeout {{{
+" Mapping commands delay
+set timeoutlen=1000
+" Make Escape faster or any key code
+set ttimeoutlen=0
+"}}}
 
 " Basic configuration {{{
   set encoding=utf-8
