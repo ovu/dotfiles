@@ -111,7 +111,7 @@ nnoremap <F5> :e!<cr>
 let g:CommandTTraverseSCM = 'pwd'
 " }}}
 
-" Netrc  management {{{ 
+" Netrw  management {{{ 
 " Open vertical explorer
 nnoremap <leader>xv :Vexplore!<cr>
 "Open horizontal explorer
@@ -228,6 +228,10 @@ Plugin 'svermeulen/vim-easyclip'
 
 " Needed for Omnisharp
 " Plugin 'tpope/vim-dispatch'
+Plugin 'szw/vim-maximizer'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'dag/vim-fish'
+Plugin 'pearofducks/ansible-vim'
 
 " Scala
 Plugin 'derekwyatt/vim-scala'
