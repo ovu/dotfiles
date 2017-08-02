@@ -33,6 +33,8 @@ set ttimeoutlen=0
   set title
   " Enable mouse 
   set mouse=a
+  " Do not show the text edited in vim when it is closed
+  au VimLeave * :!clear
 " }}}
 
 " Trailing whitespace {{{
