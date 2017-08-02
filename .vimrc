@@ -245,6 +245,9 @@ Plugin 'Shougo/vimproc.vim'
 
 
 Plugin 'ekalinin/Dockerfile.vim'
+
+Plugin 'editorconfig/editorconfig-vim'
+
 call vundle#end()
 
 filetype plugin indent on     " required!
