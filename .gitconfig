@@ -1,0 +1,45 @@
+[user]
+	name  = Diego Vera
+[user]
+	email = omar.vera@gmail.com
+[push]
+	default = simple
+[alias]
+	s = status -s
+	ba = branch --all
+	c = commit
+	ca = commit -am
+	aa = add -A
+	co = checkout
+	lg = log --color --graph --pretty=format:'%C(bold cyan)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lg1 = log --color --graph --pretty=format:'%C(bold cyan)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit
+	find = "!f() { git log --graph --all --no-merges --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an> %C(green)%d %Creset' --grep=$1; }; f"
+	finda = "!f() { git log --graph --all --no-merges --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an> %C(green)%d %Creset'  --author=$1; }; f"
+  pu = !git push --set-upstream origin `git symbolic-ref --short HEAD`
+[color]
+	ui = auto
+[color "remote"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "branch"]
+	current = yellow reverse
+	local = cyan
+	remote = green
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[merge]
+	tool = vimdiff
+[mergetool]
+	keepBackup = false
+	prompt = false
+[core]
+  editor = vim
+  autocrlf = input
