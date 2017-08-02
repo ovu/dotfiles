@@ -242,6 +242,9 @@ Plugin 'bitc/vim-hdevtools'
 Plugin 'eagletmt/neco-ghc'
 Plugin 'Shougo/neocomplete'
 Plugin 'Shougo/vimproc.vim'
+
+
+Plugin 'ekalinin/Dockerfile.vim'
 call vundle#end()
 
 filetype plugin indent on     " required!
