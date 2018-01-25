@@ -8,3 +8,12 @@ alias tags="hasktags --ctags ."
 
 set fish_color_command "purple"
 set fish_color_autosuggestion "yellow"
+
+set -gx PATH $HOME/.local/bin $PATH
+
+# history across fishes
+function save_history --on-event fish_preexec
+    history --save
+end
+alias hr 'history --merge'  # read and merge history from disk
+bind \e\[A 'history --merge ; up-or-search'
