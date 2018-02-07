@@ -10,6 +10,9 @@ set fish_color_command "purple"
 set fish_color_autosuggestion "yellow"
 
 set -gx PATH $HOME/.local/bin $PATH
+set -gx PATH $HOME/Library/Python/2.7/bin $PATH
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # history across fishes
 function save_history --on-event fish_preexec
