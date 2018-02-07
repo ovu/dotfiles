@@ -1,5 +1,6 @@
 function gco --description 'select a git repo using fzf '
-      git branch --all | sed 1,2d | sed 's/remotes\/origin\///g' | sort | uniq | fzf | read -l selected
+      set -l branchesToExclude '\*\|HEAD'
+      git branch --all | grep -v $branchesToExclude | sed 's/remotes\/origin\///g' | sort | uniq | fzf | read -l selected
 
       if [ $selected ] 
         set -l branch (echo $selected >| string trim)
