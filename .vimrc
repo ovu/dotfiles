@@ -250,6 +250,10 @@ Plugin 'ekalinin/Dockerfile.vim'
 
 Plugin 'editorconfig/editorconfig-vim'
 
+Plugin 'leafgarland/typescript-vim'
+
+Plugin 'martinda/Jenkinsfile-vim-syntax'
+
 call vundle#end()
 
 filetype plugin indent on     " required!
