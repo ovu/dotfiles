@@ -6,6 +6,7 @@ set expandtab
 set nocompatible               " be iMproved
 filetype off                   " required!
 let mapleader = ","
+set clipboard=unnamed
 " Global variables {{{
 let s:isWindows = has('win32') || has('win64')
 "}}}
@@ -181,8 +182,6 @@ nnoremap N Nzzzv
    ""   gui=bold,reverse
  endif
 
- " Pathogen bundle manager
- execute pathogen#infect()
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
