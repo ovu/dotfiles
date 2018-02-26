@@ -11,6 +11,8 @@ set fish_color_autosuggestion "yellow"
 
 set -gx PATH $HOME/.local/bin $PATH
 set -gx PATH $HOME/Library/Python/2.7/bin $PATH
+# Set env  EDITOR used by git-mediate
+set -gx EDITOR vim
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
