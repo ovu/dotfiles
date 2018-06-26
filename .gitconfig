@@ -12,6 +12,7 @@
 	aa = add -A
 	co = checkout
   tags = for-each-ref --sort=taggerdate --format '%(refname) %(taggerdate)' refs/tags
+  t = log --tags --simplify-by-decoration --pretty='format:%ci %d' --max-count=10
 	lg = log --color --graph --pretty=format:'%C(bold cyan)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lg1 = log --color --graph --pretty=format:'%C(bold cyan)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit
 	find = "!f() { git log --graph --all --no-merges --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an> %C(green)%d %Creset' --grep=$1; }; f"
