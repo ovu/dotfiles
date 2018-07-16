@@ -243,6 +243,7 @@ Plugin 'bitc/vim-hdevtools'
 Plugin 'eagletmt/neco-ghc'
 Plugin 'Shougo/neocomplete'
 Plugin 'Shougo/vimproc.vim'
+Plugin 'ovu/haskellmode-vim'
 
 
 Plugin 'ekalinin/Dockerfile.vim'
@@ -407,6 +408,15 @@ endfunction
 
 " let g:syntastic_haskell_hdevtools_args = '-g-ilib -g-isrc -g-i. -g-idist/build/autogen -g-Wall -g-package-conf='.FindCabalSandboxRootPackageConf()
 " let g:hdevtools_options = '-g-ilib -g-isrc -g-i. -g-idist/build/autogen -g-Wall -g-package-conf='.FindCabalSandboxRootPackageConf()
+
+" Config for haskell mode
+let g:haddock_browser="open"
+let g:haddock_browser_url="http://localhost:8000/"
+let g:haddock_browser_callformat = "%s %s"
+" let g:haddock_browser="/Applications/Safari.app/Contents/MacOS/Safari"
+let g:haddock_indexfiledir="/Users/omardiego/.vim/"
+let g:haddock_docdir="/Users/omardiego/.stack/snapshots/x86_64-osx/lts-7.17/8.0.1/"
+
 
 " }}}
 
