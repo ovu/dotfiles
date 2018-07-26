@@ -642,3 +642,9 @@ nmap <Leader>t <Plug>(easymotion-t2)
 "  Because of fish shell configure bash as vim shell {{{
 set shell=/bin/bash
 "  }}}
+"  {{{ TMUX
+"  Show vim file name in tmux window
+autocmd BufReadPost,FileReadPost,BufNewFile,BufEnter * call system("tmux rename-window " . expand("%:t"))
+" When closing vim rename again the tmux window to fish
+autocmd VimLeave * call system("tmux rename-window fish")
+"  }}}
