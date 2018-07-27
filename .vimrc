@@ -171,8 +171,9 @@ nnoremap N Nzzzv
 
 " Change the cursor in insert mode"
 
-" first, enable status line always
- set laststatus=2
+" first, enable status line always (shows filename in status)
+" Not necessary with tmux
+ " set laststatus=2
 
 " now set it up to change the status line based on mode
  if version >= 700
