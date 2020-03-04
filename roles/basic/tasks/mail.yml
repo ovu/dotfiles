@@ -1,0 +1,2 @@
+- name : "Saying hello"
+  apt: pkg=nano state=installed
